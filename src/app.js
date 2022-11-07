@@ -28,4 +28,19 @@ document.querySelector("#btn").addEventListener("click", () => {
       return;
     }
   }
+  listOfUsers.push(name);
+  st();
+  const list = document.querySelector("#list");
+  const div = document.createElement("div");
+  div.classList = "users";
+  list.appendChild(div);
+  const dName = document.createElement("h3");
+  div.appendChild(dName);
+  dName.textContent = "Name: " + name;
+  const dLastName = document.createElement("h3");
+  div.appendChild(dLastName);
+  dLastName.textContent = "Surname: " + lastName;
+  const dPhone = document.createElement("h3");
+  div.appendChild(dPhone);
+  dPhone.textContent = "Phone number: " + phone;
 });
