@@ -33,6 +33,7 @@ document.querySelector("#btn").addEventListener("click", () => {
   const list = document.querySelector("#list");
   const div = document.createElement("div");
   div.classList = "users";
+  div.id = `${name}`;
   list.appendChild(div);
   const dName = document.createElement("h3");
   div.appendChild(dName);
@@ -43,4 +44,10 @@ document.querySelector("#btn").addEventListener("click", () => {
   const dPhone = document.createElement("h3");
   div.appendChild(dPhone);
   dPhone.textContent = "Phone number: " + phone;
+});
+document.querySelector("#btnD").addEventListener("click", () => {
+  let id = prompt("enter the name of the deleted contact");
+
+  document.querySelector("#list").removeChild(document.getElementById(`${id}`));
+  st();
 });
